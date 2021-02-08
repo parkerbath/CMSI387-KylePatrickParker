@@ -1,0 +1,41 @@
+
+Evaluation for Homework 1
+CMSI 387 - Operating Systems
+============================
+
+Question 1: difference     -  1 point
+Question 2: relationship   -  1 point
+Question 3: topics         -  1 point
+Question 4a:               -  1 point
+Question 4b:               -  1 point
+Question 4c:               -  1 point
+Question 5 program:        -  1 point
+Question 5 print msg:      -  1 point
+Question 5 main kill:      -  1 point
+Question 6 shortest:       -  1 point
+Question 6 policy:         -  0 point
+Question 7 program         -  1 point
+
+Total possible points:     12 points
+           your score:     11 points
+       homework total:     11/12 = 91.67% which is an A-minus
+
+Nice work!
+
+Thanks for your input about topics you favor.  WOW, that's pretty broad!
+I can get into networking and security, together and separately, later in
+the semester.  I'm not sure what you mean by "data gathering" though?  I'd
+like to find out more about what things you'd like to learn there.....
+
+You obviously spent some effort on question 6 with the three threads, but
+you didn't indicate what type of scheduling is reflected by the shortest
+average turnaround time.  I can see for myself the result of your numbers,
+but without some column headers on the table it's not 100% certain which
+thing is which.  It would be helpful for you to include some labels when
+you do this kind of thing.....  just sayin'.....
+
+Also, it would be most helpful if you include source code in its own file,
+so that I can compile/run it.  It's not as important for trivial programs
+like in this set, but in future assignments it would be appreciated.
+
+Otherwise, nice work!
