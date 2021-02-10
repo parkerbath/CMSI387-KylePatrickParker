@@ -15,6 +15,11 @@ It is common among programmers to check which version of programming language(s)
 
 ## 1.3 – Preliminary list of [possible] Linux modules that will be modified/affected
 
+- `--version`: Although we will not be modifying `--version` we will be `--version` to our `getAllVersions` command.
+- `echo`: Referencing `echo` to print the version.
+- `apt-get update` Using as a refrence used to pull updates from repositories
+- `apt-get upgrade` Using as a reference to upgrade all packages
+
 ## 1.4 – Preliminary list of any new modules that you will produce [or 'Not Applicable' if there are none]
 
 We will be using the ability of commands such as `java -version` behind the scenes for each of the installed programming languages to access the information of what version each programming language is. The same goes for updating each of the programming languages.
