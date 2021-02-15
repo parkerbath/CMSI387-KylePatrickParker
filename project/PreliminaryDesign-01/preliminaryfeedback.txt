@@ -1,0 +1,40 @@
+
+Parker Bath, Patrick Jayoma, and Kyle Traverse
+CMSI 387 Project Spring 2021
+Preliminary Design Document
+Evaluation and Feedback
+======================================================
+
+"allVersions" ~ adding command to check/update all versions
+
+What an interesting concept this one is!  I like the idea of making this an
+automatic function!  There are some caveats.....
+
+First of all this is NOT really a "kernel" modification or addition.  This
+is a utility.  However, you might be able to add it to 'common utilities' in
+the Linux directory hierarchy to make something that will integrate with the
+O/S.
+
+Second, this is an ambitious project for one semester.  It's gonna take a lot
+of work doing searches and trial-and-error to make this work correctly.  There
+are things to consider, like what if the user wants to update NEARLY all of
+the installed things, but NOT 100% of them ~ will they be given an option to
+do an update on just part of the installed base?  What if the user only wants
+to update ONE thing?  What if there is an error during the update?  What if
+the user loses connectivity?
+
+These are NOT questions to keep you from doing this, or to say it's a bad idea
+by any means.  It's a GOOD idea, just gonna be involved.  However, I'm sure if
+you work diligently, you'll pull it off!
+
+A useful idea and you three are conceptualizing programmer tools, which is
+really great!
+
+Full credit earned.
+
+Semester so far:
+   homework01 91.67% * 10 points =  9.17 points
+   delivery01 100.0% * 10 points = 10.00 points
+                          total:   19.17 out of 20 = 95.85% which is an A
+
+Keep thinking up these good ideas!
