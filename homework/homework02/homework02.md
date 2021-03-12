@@ -12,13 +12,13 @@
 3. **IN JAVA:** Write a test program in Java for the BoundedBuffer class of Figure 4.17 on page 119 of the textbook. <br>
 
 ```
- Refer to BoundedBufferTest
+ Refer to BoundedBufferTest.java
 ```
 
 4. **IN JAVA:** Modify the BoundedBuffer class of Figure 4.17 [page 119] to call notifyAll() only when inserting into an empty buffer or retrieving from a full buffer. Test that the program still works using your test program from the previous exercise. <br>
 
 ```Java
-ANSWER HERE
+Refer to BoundedBuffer.java
 ```
 
 5. Suppose T1 writes new values into x and y and T2 reads the values of both x and y. Is it possible for T2 to see the old value of x but the new value of y? Answer this question three times: once assuming the use of two-phase locking, once assuming the read committed isolation level is used and is implemented with short read locks, and once assuming snapshot isolation. In each case, justify your answer.<br>
