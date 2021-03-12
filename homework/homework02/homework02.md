@@ -1,20 +1,19 @@
 # Problems for Assignment #2
 
-1. In the mutex-locking pseudocode of Figure 4.10 on page 111, there are two consecutive steps that remove the current thread from the runnable threads and then unlock the spinlock. Because spinlocks should be held as briefly as possible, we ought to consider whether these steps could be reversed, as shown in Figure 4.28 [on page 148]. Explain why reversing them would be a bad idea by giving an example sequence of events where the reversed version malfunctions.\
-   \
-   `ANSWER HERE`
+1.  In the mutex-locking pseudocode of Figure 4.10 on page 111, there are two consecutive steps that remove the current thread from the runnable threads and then unlock the spinlock. Because spinlocks should be held as briefly as possible, we ought to consider whether these steps could be reversed, as shown in Figure 4.28 [on page 148]. Explain why reversing them would be a bad idea by giving an example sequence of events where the reversed version malfunctions.\
+    \
+    `ANSWER HERE`
 
-2. Suppose the first three lines of the audit method in Figure 4.27 on page 144 were replaced by the following two lines:
-   ![prob2](./Images/prob2.png)
+2.  Suppose the first three lines of the audit method in Figure 4.27 on page 144 were replaced by the following two lines:
+    ![prob2](./Images/prob2.png)
 
-   - Explain why this would be a bug: <br>
+    - Explain why this would be a bug: <br>
 
-     <p>
-         
-         State snapshot = state.get() makes sure that getSeatsRemaining() and getCashonhand is referencing the same state. By removing snapshot, the bug will occur because when the state objects are called such as state.get().getSeatsRemaining() and state.get().getCashOnHand() may possibly be updated, which will then lead to different values returned from getSeatsRemaining() and getCashonHand().
-      </p>
+```
+   State snapshot = state.get() makes sure that getSeatsRemaining() and getCashonhand is referencing the same state. By removing snapshot, the bug will occur because when the state objects are called such as state.get().getSeatsRemaining() and state.get().getCashOnHand() may possibly be updated, which will then lead to different values returned from getSeatsRemaining() and getCashonHand().
+```
 
-3. **IN JAVA:** Write a test program in Java for the BoundedBuffer class of Figure 4.17 on page 119 of the textbook. <br>
+3.  **IN JAVA:** Write a test program in Java for the BoundedBuffer class of Figure 4.17 on page 119 of the textbook. <br>
 
 ```
  Refer to BoundedBufferTest.java
