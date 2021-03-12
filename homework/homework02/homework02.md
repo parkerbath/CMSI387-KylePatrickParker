@@ -5,9 +5,10 @@
    `ANSWER HERE`
 
 2. Suppose the first three lines of the audit method in Figure 4.27 on page 144 were replaced by the following two lines:
-   ![prob2](./Images/prob2.png)\
-   \
-   `ANSWER HERE `
+   ![prob2](./Images/prob2.png)
+
+   - Explain why this would be a bug: <br>
+     `State snapshot = state.get() makes sure that getSeatsRemaining() and getCashonhand is referencing the same state. By removing snapshot, the bug will occur because when the state objects are called such as state.get().getSeatsRemaining() and state.get().getCashOnHand() may possibly be updated, which will then lead to different values returned from getSeatsRemaining() and getCashonHand().`
 
 3. **IN JAVA:** Write a test program in Java for the BoundedBuffer class of Figure 4.17 on page 119 of the textbook. <br>
 
@@ -17,7 +18,7 @@
 
 4. **IN JAVA:** Modify the BoundedBuffer class of Figure 4.17 [page 119] to call notifyAll() only when inserting into an empty buffer or retrieving from a full buffer. Test that the program still works using your test program from the previous exercise. <br>
 
-```Java
+```
 Refer to BoundedBuffer.java
 ```
 
