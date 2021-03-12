@@ -8,10 +8,7 @@
     ![prob2](./Images/prob2.png)
 
     - Explain why this would be a bug: <br>
-
-```
-   State snapshot = state.get() makes sure that getSeatsRemaining() and getCashonhand is referencing the same state. By removing snapshot, the bug will occur because when the state objects are called such as state.get().getSeatsRemaining() and state.get().getCashOnHand() may possibly be updated, which will then lead to different values returned from getSeatsRemaining() and getCashonHand().
-```
+      - State snapshot = state.get() makes sure that getSeatsRemaining() and getCashonhand is referencing the same state. By removing snapshot, the bug will occur because when the state objects are called such as state.get().getSeatsRemaining() and state.get().getCashOnHand() may possibly be updated, which will then lead to different values returned from getSeatsRemaining() and getCashonHand().
 
 3.  **IN JAVA:** Write a test program in Java for the BoundedBuffer class of Figure 4.17 on page 119 of the textbook. <br>
 
