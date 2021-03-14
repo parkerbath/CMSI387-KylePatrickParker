@@ -1,0 +1,45 @@
+
+
+CMSI 387 Operating Systems
+Results for Homework #2 Evaluation
+   Parker, Patrick, and Kyle
+==================================
+
+Question 1 mutex reversing:          0/ 5 points
+   Not done ~ zero points earned
+
+Question 2 auditing code change:     5/ 5 points
+
+Question 3 test program:            20/20 points
+
+Question 4 notifyall() addition:    10/10 points
+
+Question 5a 2-phase locking:         0/ 5 points
+   Not done ~ zero points earned
+
+Question 5b short read locks:        0/ 5 points
+   Not done ~ zero points earned
+
+Question 5c snapshot isolation:      0/ 5 points
+   Not done ~ zero points earned
+
+Question 6 virtual address xlate:    0/ 5 points
+   Not done ~ zero points earned
+
+Question 7 calc. explanation:        0/ 5 points
+   Not done ~ zero points earned
+
+Question 8 loop 4096 analysis:       0/20 points
+   Not done ~ zero points earned
+
+Question 9 fork() tree:              0/15 points
+   Not done ~ zero points earned
+
+Total 35 out of 100 = 35.00% which is not so good...
+
+Comments:
+---------
+I'll re-evaluate this assignment if you turn the rest in, but right now this
+is problematic....
+
+Let me know if you need some help or further explanations of the material!
