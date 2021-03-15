@@ -2,9 +2,10 @@
 
 1.  In the mutex-locking pseudocode of Figure 4.10 on page 111, there are two consecutive steps that remove the current thread from the runnable threads and then unlock the spinlock. Because spinlocks should be held as briefly as possible, we ought to consider whether these steps could be reversed, as shown in Figure 4.28 [on page 148]. Explain why reversing them would be a bad idea by giving an example sequence of events where the reversed version malfunctions.
 
-#### Answer
+#### Answer:
 
-The issue with reversing the steps is that it unlocks the spin lock before removing the current thread which can result in the thread running more than once. This is dangerous because if the thread isn’t removed before unlocking the mutex, the thread will be caught in an infinite loop.
+    The issue with reversing the steps is that it unlocks the spin lock before removing the current thread which can result in the thread running more than once.       
+    This is dangerous because if the thread isn’t removed before unlocking the mutex, the thread will be caught in an infinite loop.
 
 
 2.  Suppose the first three lines of the audit method in Figure 4.27 on page 144 were replaced by the following two lines:
@@ -27,11 +28,14 @@ Refer to BoundedBuffer.java
 
 5. Suppose T1 writes new values into x and y and T2 reads the values of both x and y. Is it possible for T2 to see the old value of x but the new value of y? Answer this question three times: once assuming the use of two-phase locking, once assuming the read committed isolation level is used and is implemented with short read locks, and once assuming snapshot isolation. In each case, justify your answer.<br>
 
-#### Answer
+#### Answer:
 
-A) In the first case it’s not possible because in two phase locking, there’s an expanding phase where locks are acquired however none are released. The opposite occurs during a shrinking phase. T2 will only be able to read the values of T1 after T1 has written new ones and the lock’s been released.
-B) It is possible in the second case though where T2 is able to read older values as well as newer values (like x and y) because read committed leads the write transactions to be exclusively locked whereas the read transactions use a shared lock which is received before each read and released right after.
-C) It is also possible in the snapshot isolation instance that a read action can read an older version rather than a newer one  because each time a new value is involved, the write action stores that new value as an entity in a different location.
+    A) In the first case it’s not possible because in two phase locking, there’s an expanding phase where locks are acquired however none are released. The 
+    opposite occurs during a shrinking phase. T2 will only be able to read the values of T1 after T1 has written new ones and the lock’s been released.
+    B) It is possible in the second case though where T2 is able to read older values as well as newer values (like x and y) because read committed leads the 
+    write transactions to be exclusively locked whereas the read transactions use a shared lock which is received before each read and released right after.
+    C) It is also possible in the snapshot isolation instance that a read action can read an older version rather than a newer one  because each time a new value 
+    is involved, the write action stores that new value as an entity in a different location.
 
 6. Assume a page size of 4 KB and the page mapping shown in Figure 6.10 on page 225. What are the virtual addresses of the first and last 4-byte words in page 6? What physical addresses do these translate into?<br>
    `ANSWER HERE`
@@ -64,7 +68,10 @@ C) It is also possible in the snapshot isolation instance that a read action can
 
 #### Answer:
 
-In MacOS using VSCode, I created an array of chars representing the bytes and created a variable storing the size of the array. Then created an outer loop that runs as many times as you want. Within that for loop is another for loop which starts at the 4096th byte of the array and continues to access each successive 4096th byte. What I found out was that the time it took to access the array was pretty much instantaneous and change in array size made minuscule to no change in time. This is all because array access is in constant time. 
+    In MacOS using VSCode, I created an array of chars representing the bytes and created a variable storing the size of the array. Then created an outer loop 
+    that runs as many times as you want. Within that for loop is another for loop which starts at the 4096th byte of the array and continues to access each 
+    successive 4096th byte. What I found out was that the time it took to access the array was pretty much instantaneous and change in array size made minuscule 
+    to no change in time. This is all because array access is in constant time. 
 
 9. Figure 7.20 [page 324] contains a simple C program that loops three times, each time calling the fork() system call. Afterward it sleeps for 30 seconds. Compile and run this program, and while it is in its 30-second sleep, use the ps command in a second terminal window to get a listing of processes. How many processes are shown running the program? Explain by drawing a family tree of the processes, with one box for each process and a line connecting each (except the first one) to its parent.<br>
    `ANSWER HERE`
