@@ -40,7 +40,9 @@ Refer to BoundedBuffer.java
    `ANSWER HERE`
 
 7. At the lower right of Figure 6.13 on page 236 are page numbers 1047552 and 1047553. Explain how these page numbers were calculated.<br>
-   `ANSWER HERE`
+```
+The way these numbers were calculated were by using the fact that the IA-32 two-level page table works in chunks of 1024. Because of this and the fact that we are looking at the last block according to the diagram, we know that we need to multiply by 1024. Since the previous block is 1023, we multiply this by 1024 to get the number at the bottom of the diagram, which is 1047552. The next number was calculated by simply adding one since it is the very next block in the diagram. 
+```
 
 8. Write a program that loops many times, each time using an inner loop to access every 4096th element of a large array of bytes. Time how long your program takes per array access. Do this with varying array sizes. Are there any array sizes when the average time suddenly changes? Write a report in which you explain what you did, and the hardware and software system context in which you did it, carefully enough that someone could replicate your results.<br>
 
