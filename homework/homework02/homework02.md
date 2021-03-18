@@ -37,10 +37,10 @@ Refer to BoundedBuffer.java
     is involved, the write action stores that new value as an entity in a different location.
 
 6. Assume a page size of 4 KB and the page mapping shown in Figure 6.10 on page 225. What are the virtual addresses of the first and last 4-byte words in page 6? What physical addresses do these translate into?<br>
-   `ANSWER HERE`
+   `The first 4 byte word would have a virtual address of 12,288, since page 6 maps to page frame 3 and 4096 multiplied by 3 is 12,288. This virtual address translates to the physical address of 24,576 since that is 4096 multiplied by 6, which is the page number coresponding to page frame 3. The last 4 byte word would have a virtual address of 16,380. That is because we need to add 4092 to the original virtual address of 12,288 to get the last 4 byte word instead of 4096 because it is the end of the block so we need to subtract 4. The corresponding physical address can be calculated the same way by adding 4092 to the original physical address to get 28,668. `
 
 7. At the lower right of Figure 6.13 on page 236 are page numbers 1047552 and 1047553. Explain how these page numbers were calculated.<br>
-   `ANSWER HERE`
+   `The way these numbers were calculated were by using the fact that the IA-32 two-level page table works in chunks of 1024. Because of this and the fact that we are looking at the last block according to the diagram, we know that we need to multiply by 1024. Since the previous block is 1023, we multiply this by 1024 to get the number at the bottom of the diagram, which is 1047552. The next number was calculated by simply adding one since it is the very next block in the diagram. `
 
 8. Write a program that loops many times, each time using an inner loop to access every 4096th element of a large array of bytes. Time how long your program takes per array access. Do this with varying array sizes. Are there any array sizes when the average time suddenly changes? Write a report in which you explain what you did, and the hardware and software system context in which you did it, carefully enough that someone could replicate your results.<br>
 
