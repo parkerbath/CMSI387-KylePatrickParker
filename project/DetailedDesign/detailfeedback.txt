@@ -1,0 +1,40 @@
+
+Parker Bath, Patrick Jayoma, and Kyle Traverse
+CMSI 387 Project Spring 2021
+Preliminary Design Document
+Evaluation and Feedback
+======================================================
+
+Nice pivot!  Looks like this will be a fun project.
+
+Keyloggers are very useful, but be aware that they are also hacking tools, so
+you may get some "interesting" looks when you describe this project when on
+an interview...... not that it's bad, just sayin'......
+
+What will your new module be called?  Since you didn't do a preliminary doc
+for this, a wee bit more detail would be good.  If you'll add a few more of
+the details of what you are doing, you can boost this up to full credit.  By
+the end of the semester, add in:
+
+   the name of the project
+   the command used to run it
+   a list of all switches that will be used on the command line
+      like "-s" or "-l" or something
+   a description of where the output will go [probably the kernel log file]
+
+The details you put into section 2.4 are not what is intended.  Change that
+section to contain the third item above.
+
+A useful idea and you three are conceptualizing programmer tools, which is
+really great!
+
+Full credit earned.
+
+Semester so far:
+   homework01  91.67% * 10 points =  9.17 points
+   homework01  92.00% * 10 points =  9.20 points
+   delivery01 100.00% * 10 points = 10.00 points
+   delivery01  80.00% * 10 points =  8.00 points
+                           total:   36.37 out of 40 = 90.93% which is an A-minus
+
+Keep thinking up these good ideas!

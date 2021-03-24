@@ -5,8 +5,9 @@ Results for Homework #2 Evaluation
    Parker, Patrick, and Kyle
 ==================================
 
-Question 1 mutex reversing:          0/ 5 points
+Question 1 mutex reversing:          5/ 5 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  full points earned
 
 Question 2 auditing code change:     5/ 5 points
 
@@ -14,28 +15,60 @@ Question 3 test program:            20/20 points
 
 Question 4 notifyall() addition:    10/10 points
 
-Question 5a 2-phase locking:         0/ 5 points
+Question 5a 2-phase locking:         5/ 5 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  full points earned
 
-Question 5b short read locks:        0/ 5 points
+Question 5b short read locks:        2/ 5 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  incorrect answer put partial credit
 
-Question 5c snapshot isolation:      0/ 5 points
+Question 5c snapshot isolation:      5/ 5 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  full points earned
 
-Question 6 virtual address xlate:    0/ 5 points
+Question 6 virtual address xlate:    5/ 5 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  full points earned
 
-Question 7 calc. explanation:        0/ 5 points
+Question 7 calc. explanation:        5/ 5 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  full points earned
 
-Question 8 loop 4096 analysis:       0/20 points
+Question 8 loop 4096 analysis:      18/20 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  some points earned
+      NOTE:  The intent of the exercise was to keep increasing the size of
+      the array until you observe that there is a *significant* jump in the
+      access time.  This indicates when the VM system is swapping out since
+      it is out of space and must use a different page of virtual memory to
+      map to physical memory.
 
-Question 9 fork() tree:              0/15 points
+Question 9 fork() tree:              12/15 points
    Not done ~ zero points earned
+   re-evaluated 2021-03-23  some points earned
+      NOTE:  For this one, double check that your PIDs and PPIDs are lining
+      up as you have drawn them on the diagram.  Try using the command line
+      command "ps -eaf | grep multiforker" to get the results.  You should
+      see that there is a different hierarchy when you trace the PIDs to
+      their PPIDs, something like this:
 
-Total 35 out of 100 = 35.00% which is not so good...
+                        7739
+                          |
+                 +------7789-------+
+                 |        |        |
+                 |        |        |
+         +-----7790     7791     7792
+         |       |        |
+         |       |        |
+       7793    7795     7794
+         |
+         |
+       7796
+
+
+
+Total 92 out of 100 = 92.00% which is an A-minus
 
 Comments:
 ---------
