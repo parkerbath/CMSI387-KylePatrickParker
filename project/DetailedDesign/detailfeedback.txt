@@ -1,7 +1,7 @@
 
 Parker Bath, Patrick Jayoma, and Kyle Traverse
 CMSI 387 Project Spring 2021
-Preliminary Design Document
+Detailed Design Document
 Evaluation and Feedback
 ======================================================
 
@@ -32,9 +32,9 @@ Full credit earned.
 
 Semester so far:
    homework01  91.67% * 10 points =  9.17 points
-   homework01  92.00% * 10 points =  9.20 points
+   homework02  92.00% * 10 points =  9.20 points
    delivery01 100.00% * 10 points = 10.00 points
-   delivery01  80.00% * 10 points =  8.00 points
+   delivery02  80.00% * 10 points =  8.00 points
                            total:   36.37 out of 40 = 90.93% which is an A-minus
 
 Keep thinking up these good ideas!
