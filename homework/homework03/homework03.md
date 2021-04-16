@@ -27,7 +27,10 @@ int main() {
  }
 ```
 
-
+#
+ Problem 4
+---
+Refer to nmap.c - to test file, run command ```./a.out test.txt ```
 
 # Problem 5
 ---
