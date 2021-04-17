@@ -1,4 +1,7 @@
 put homework answers here
+# Problem 2
+---
+This program is immune to deadlock because of the use of threads and locks. In order to make sure threads that are dependent on each other do not run at the same time, this program locks certain threads from executing until other threads have run. This way there can never be a situation where a philospher is in deadlock trying to eat and think at the same time. The same goes for all other threads; the program will locks certain threads and then unlocks them in a timely way in order to constantly generate actions for the philosophers with no stops.
 
 # Problem 3
 ```c
