@@ -24,75 +24,73 @@ void check(int);
 
 void *philosopher(void* nPhilosopher)
 {
-	int i, j=0;
-	while(j<5)
-	{
-		i=(int)nPhilosopher;
-		printf("\nPhilosopher %d is Thinking!!\n", i);
-		thinking();
-		printf("\nPhilosopher %d is Hungry!!\n", i);
-		pick_up_forks(i);
-		printf("\nPhilosopher %d is Eating!!\n", i);
-		eating();
-		printf("\nPhilosopher %d has Finished Eating and has Put down the fork!!\n", i);
-		put_down_forks(i);
-		j++;
-	}		
+    int i, j=0;
+    while(j<5)
+        {
+            i=(int)nPhilosopher;
+            printf("\nPhilosopher %d is Thinking!!\n", i);
+            thinking();
+            printf("\nPhilosopher %d is Hungry!!\n", i);
+            pick_up_forks(i);
+            printf("\nPhilosopher %d is Eating!!\n", i);
+            eating();
+            printf("\nPhilosopher %d has Finished Eating and has Put down the fork!!\n", i);
+            put_down_forks(i);
+            j++;
+        }		
 }
 
 void eating()
 {
-	sleep(3);
+    sleep(3);
 }
 
 void thinking()
 {
-	sleep(3);
+    sleep(3);
 }
 
 void pick_up_forks(int i)
 {	
-	pthread_mutex_lock(&mutex);
-	state[i]=1;	
-	check(i);
-	pthread_mutex_unlock(&mutex);
-	sem_wait(&s[i]);
+    pthread_mutex_lock(&mutex);
+    state[i]=1;	
+    check(i);
+    pthread_mutex_unlock(&mutex);
+    sem_wait(&s[i]);
 }
 
 void put_down_forks(int i)
 {
-	pthread_mutex_lock(&mutex);
-	state[i]=0;
-	printf("Fork %d and %d are dropped!!\n",(i+(PHILNUMBER-1))%PHILNUMBER, i);
-	check((i+(PHILNUMBER-1))%PHILNUMBER);
-	check((i+1)%PHILNUMBER);
-	pthread_mutex_unlock(&mutex);
+    pthread_mutex_lock(&mutex);
+    state[i]=0;
+    printf("Fork %d and %d are dropped!!\n",(i+(PHILNUMBER-1))%PHILNUMBER, i);
+    check((i+(PHILNUMBER-1))%PHILNUMBER);
+    check((i+1)%PHILNUMBER);
+    pthread_mutex_unlock(&mutex);
 }
 
 void check(int i)
 {
-		if(state[i]==1 && state[(i+(PHILNUMBER-1))%PHILNUMBER]!=2 && state[(i+1)%PHILNUMBER]!= 2)
-		{
-			state[i]=2;
-			printf("\nPhilosopher %d has picked up forks: %d and %d!!\n",i, (i+(PHILNUMBER-1))%PHILNUMBER, i);
-			sem_post(&s[i]);
-		}
+    if(state[i]==1 && state[(i+(PHILNUMBER-1))%PHILNUMBER]!=2 && state[(i+1)%PHILNUMBER]!= 2)
+    {
+        state[i]=2;
+        printf("\nPhilosopher %d has picked up forks: %d and %d!!\n",i, (i+(PHILNUMBER-1))%PHILNUMBER, i);
+        sem_post(&s[i]);
+    }
 }
 
 int main()
 {
-	int i;
-	pthread_t thread_Id[PHILNUMBER];
-	for(i=0; i<PHILNUMBER; i++)
-		sem_init(&s[i], 0, 0);
-		
-	for(i=0; i<PHILNUMBER ; i++)			
-		pthread_create(&thread_Id[i], NULL, philosopher, (void*)i);
-		
-	for(i=0; i<PHILNUMBER; i++)
-		pthread_join(thread_Id[i], NULL);
+    int i;
+    pthread_t thread_Id[PHILNUMBER];
+    for(i=0; i<PHILNUMBER; i++)
+        sem_init(&s[i], 0, 0);	
+    for(i=0; i<PHILNUMBER ; i++)			
+        pthread_create(&thread_Id[i], NULL, philosopher, (void*)i);
+    for(i=0; i<PHILNUMBER; i++)
+        pthread_join(thread_Id[i], NULL);
 	
-	return 0;
+    return 0;
 }
 ```
 # Problem 2
