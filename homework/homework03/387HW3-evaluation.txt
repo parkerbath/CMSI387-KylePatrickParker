@@ -1,0 +1,45 @@
+
+Evaluation for Homework 3
+CMSI 387 - Operating Systems
+============================
+
+Question 1: dining philosophers program:   18.00 out of 20 possible
+Question 2: why immune explanation     :   10.00 out of 10 possible
+Question 3: file processing "C" program:   20.00 out of 20 possible
+Question 4: mmap program "C" program   :   20.00 out of 20 possible
+Question 5: appropriate class explained:   10.00 out of 10 possible
+
+Total possible points:     80.00 points
+           your score:     78.00 points
+                total:     78.00/80.00 = 97.50% which is an A-plus
+
+Comments:
+---------
+
+Pretty good job here, just a couple of notes:
+
+No dining philosophers program in your repo, but it's in your markdown file
+so I almost didn't spot it.  It's a good idea in courses like this, which
+are program-based, to put your code into a separate source file.  However,
+when I compile it there are several warning messages about deprecated and
+mis-matched things.  You should definitely clean those things up before you
+submit your code.
+
+The other thing about dining philosophers is that the program should keep on
+running and not stop unless a deadlock occurs.  Yours goes for a while, then
+stops by itself.  The whole point of a deadlock demonstrator is to show that
+the program can run forever.  Still, it runs, so you earn nearly all credit.
+
+Everything else looks fine.
+
+
+
+==============
+SEMESTER SO FAR, COMING UP TO FINAL EXAM:
+   homework01:  11/12 =  91.67% of 10 pts =  9.17 pts
+   homework02:  92/97 =  94.85% of 10 pts =  9.49 pts
+   homework03:  78/80 =  97.50% of 10 pts =  9.75 pts
+        total:                              28.41 pts out of 30.00
+                        which is 94.70% which is an A
+
+Very good work!!
